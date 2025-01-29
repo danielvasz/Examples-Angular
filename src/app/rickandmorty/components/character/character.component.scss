@@ -1,0 +1,41 @@
+.character-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.character-card {
+    // height: 200px;
+    width: 300px;
+}
+
+.character-card-footer {
+    padding: 16px;
+}
+
+.image-character {
+    height: 80px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.character-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 5px;
+}

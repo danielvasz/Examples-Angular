@@ -8,6 +8,9 @@ dependencies:
   '@angular/animations':
     specifier: ^19.0.0
     version: 19.1.3(@angular/core@19.1.3)
+  '@angular/cdk':
+    specifier: 19.1.1
+    version: 19.1.1(@angular/common@19.1.3)(@angular/core@19.1.3)(rxjs@7.8.1)
   '@angular/common':
     specifier: ^19.0.0
     version: 19.1.3(@angular/core@19.1.3)(rxjs@7.8.1)
@@ -20,6 +23,9 @@ dependencies:
   '@angular/forms':
     specifier: ^19.0.0
     version: 19.1.3(@angular/common@19.1.3)(@angular/core@19.1.3)(@angular/platform-browser@19.1.3)(rxjs@7.8.1)
+  '@angular/material':
+    specifier: 19.1.1
+    version: 19.1.1(@angular/animations@19.1.3)(@angular/cdk@19.1.1)(@angular/common@19.1.3)(@angular/core@19.1.3)(@angular/forms@19.1.3)(@angular/platform-browser@19.1.3)(rxjs@7.8.1)
   '@angular/platform-browser':
     specifier: ^19.0.0
     version: 19.1.3(@angular/animations@19.1.3)(@angular/common@19.1.3)(@angular/core@19.1.3)
@@ -29,6 +35,15 @@ dependencies:
   '@angular/router':
     specifier: ^19.0.0
     version: 19.1.3(@angular/common@19.1.3)(@angular/core@19.1.3)(@angular/platform-browser@19.1.3)(rxjs@7.8.1)
+  '@ngrx/effects':
+    specifier: ^19.0.0
+    version: 19.0.0(@angular/core@19.1.3)(@ngrx/store@19.0.0)(rxjs@7.8.1)
+  '@ngrx/store':
+    specifier: ^19.0.0
+    version: 19.0.0(@angular/core@19.1.3)(rxjs@7.8.1)
+  '@ngrx/store-devtools':
+    specifier: ^19.0.0
+    version: 19.0.0(@angular/core@19.1.3)(@ngrx/store@19.0.0)(rxjs@7.8.1)
   rxjs:
     specifier: ~7.8.0
     version: 7.8.1
@@ -356,6 +371,21 @@ packages:
       - yaml
     dev: true
 
+  /@angular/cdk@19.1.1(@angular/common@19.1.3)(@angular/core@19.1.3)(rxjs@7.8.1):
+    resolution: {integrity: sha512-MmfNB9iANuDN1TS+HL8uKqA3/7pdVeCRN+HdAcfqFrcqZmSUUSlYWy8PXqymmyeXxoSwt9p4I/6R0By03VoCMw==}
+    peerDependencies:
+      '@angular/common': ^19.0.0 || ^20.0.0
+      '@angular/core': ^19.0.0 || ^20.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/common': 19.1.3(@angular/core@19.1.3)(rxjs@7.8.1)
+      '@angular/core': 19.1.3(rxjs@7.8.1)(zone.js@0.15.0)
+      rxjs: 7.8.1
+      tslib: 2.8.1
+    optionalDependencies:
+      parse5: 7.2.1
+    dev: false
+
   /@angular/cli@19.1.4(@types/node@22.10.10):
     resolution: {integrity: sha512-C1Z2OTLjUJIkLsay6RJ1rzY0Tdb1Mj/cBh9dZryDstuits8G0Tphe36hnLownnoHspFQfjSRtVzF4NwKiDlQRw==}
     engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -453,6 +483,27 @@ packages:
     dependencies:
       '@angular/common': 19.1.3(@angular/core@19.1.3)(rxjs@7.8.1)
       '@angular/core': 19.1.3(rxjs@7.8.1)(zone.js@0.15.0)
+      '@angular/platform-browser': 19.1.3(@angular/animations@19.1.3)(@angular/common@19.1.3)(@angular/core@19.1.3)
+      rxjs: 7.8.1
+      tslib: 2.8.1
+    dev: false
+
+  /@angular/material@19.1.1(@angular/animations@19.1.3)(@angular/cdk@19.1.1)(@angular/common@19.1.3)(@angular/core@19.1.3)(@angular/forms@19.1.3)(@angular/platform-browser@19.1.3)(rxjs@7.8.1):
+    resolution: {integrity: sha512-x/EwyBx3yCIYyu/hve19eecmufJzwltRWOO/3Y74jY4jSNNFrR9046t0ptw4fyEXjN8UQZI6Fp/melcZxl3IiA==}
+    peerDependencies:
+      '@angular/animations': ^19.0.0 || ^20.0.0
+      '@angular/cdk': 19.1.1
+      '@angular/common': ^19.0.0 || ^20.0.0
+      '@angular/core': ^19.0.0 || ^20.0.0
+      '@angular/forms': ^19.0.0 || ^20.0.0
+      '@angular/platform-browser': ^19.0.0 || ^20.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/animations': 19.1.3(@angular/core@19.1.3)
+      '@angular/cdk': 19.1.1(@angular/common@19.1.3)(@angular/core@19.1.3)(rxjs@7.8.1)
+      '@angular/common': 19.1.3(@angular/core@19.1.3)(rxjs@7.8.1)
+      '@angular/core': 19.1.3(rxjs@7.8.1)(zone.js@0.15.0)
+      '@angular/forms': 19.1.3(@angular/common@19.1.3)(@angular/core@19.1.3)(@angular/platform-browser@19.1.3)(rxjs@7.8.1)
       '@angular/platform-browser': 19.1.3(@angular/animations@19.1.3)(@angular/common@19.1.3)(@angular/core@19.1.3)
       rxjs: 7.8.1
       tslib: 2.8.1
@@ -2410,6 +2461,43 @@ packages:
     dev: true
     optional: true
 
+  /@ngrx/effects@19.0.0(@angular/core@19.1.3)(@ngrx/store@19.0.0)(rxjs@7.8.1):
+    resolution: {integrity: sha512-McNrbaPoDUlukrVPAckpRYLFSOoHwMQgMaiiNUvIGJuH/S1Wja+0xAT/e7+h+SO6xaFqDiEqj7GiR8lPkIAnVw==}
+    peerDependencies:
+      '@angular/core': ^19.0.0
+      '@ngrx/store': 19.0.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 19.1.3(rxjs@7.8.1)(zone.js@0.15.0)
+      '@ngrx/store': 19.0.0(@angular/core@19.1.3)(rxjs@7.8.1)
+      rxjs: 7.8.1
+      tslib: 2.8.1
+    dev: false
+
+  /@ngrx/store-devtools@19.0.0(@angular/core@19.1.3)(@ngrx/store@19.0.0)(rxjs@7.8.1):
+    resolution: {integrity: sha512-ZlnvWx1mYzZnnwEnMLMv2xDwK/IPN7bZ/901e6kwISKn+9HliC5Z4GzAhaRP/8iq0gAHvmMdBlrcvJrKmBVBSQ==}
+    peerDependencies:
+      '@angular/core': ^19.0.0
+      '@ngrx/store': 19.0.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 19.1.3(rxjs@7.8.1)(zone.js@0.15.0)
+      '@ngrx/store': 19.0.0(@angular/core@19.1.3)(rxjs@7.8.1)
+      rxjs: 7.8.1
+      tslib: 2.8.1
+    dev: false
+
+  /@ngrx/store@19.0.0(@angular/core@19.1.3)(rxjs@7.8.1):
+    resolution: {integrity: sha512-AaryTJF1DsXUVWFhCl833LhvjyPjDOAMX9tqGBDfYGhaNOWWX3q/3z5HQ0XCrJ8kDJN3EHiNQa3XHxFaFQUo9A==}
+    peerDependencies:
+      '@angular/core': ^19.0.0
+      rxjs: ^6.5.3 || ^7.5.0
+    dependencies:
+      '@angular/core': 19.1.3(rxjs@7.8.1)(zone.js@0.15.0)
+      rxjs: 7.8.1
+      tslib: 2.8.1
+    dev: false
+
   /@ngtools/webpack@19.1.4(@angular/compiler-cli@19.1.3)(typescript@5.6.3)(webpack@5.97.1):
     resolution: {integrity: sha512-ZmUlbVqu/pz8abxVxNCKgKeY5g2MX1NsKxhM8rRV5tVV/MaAtSYNHgmFSYcKWA178v7k6BUuhnoNNxl5qqc1kw==}
     engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -4329,7 +4417,6 @@ packages:
   /entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
-    dev: true
 
   /env-paths@2.2.1:
     resolution: {integrity: sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==}
@@ -6288,7 +6375,6 @@ packages:
     resolution: {integrity: sha512-BuBYQYlv1ckiPdQi/ohiivi9Sagc9JG+Ozs0r7b/0iK3sKmrb0b9FdWdBbOdx6hBCM/F9Ir82ofnBhtZOjCRPQ==}
     dependencies:
       entities: 4.5.0
-    dev: true
 
   /parseurl@1.3.3:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}

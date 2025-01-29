@@ -1,0 +1,49 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+
+<div class="character-form">
+    @for (item of characterList; track item) {
+        <mat-card class="character-card" appearance="outlined" (click)="chipCharacter(item['gender'], 'gender')">
+          <mat-card-header>
+            <mat-card-title-group>
+              <mat-card-title>{{ item['name']}}</mat-card-title>
+              <mat-card-subtitle>{{ item['species']}}</mat-card-subtitle>
+              <img class="image-character" src="{{ item['image'] }}">
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="character-content">
+              <div><b>Origin:</b> {{ item['origin']['name'] }}</div>
+              <div><b>Location:</b> {{ item['location']['name']}}</div>
+            </div>
+          </mat-card-content>
+          <mat-card-footer class="card-footer">
+            <mat-chip-set>
+              <mat-chip (click)="openSnackBar(item['status'])">
+                <mat-icon matChipTrailingIcon svgIcon="{{ chipCharacter(item['status'], 'status') }}"></mat-icon>
+                {{ item['status'] }}
+              </mat-chip>
+              <mat-chip>
+                <mat-icon matChipTrailingIcon svgIcon="{{ chipCharacter(item['gender'], 'gender') }}"></mat-icon>
+                {{ item['gender'] }}
+              </mat-chip>
+            </mat-chip-set>
+            <button mat-icon-button (click)="openModal(item['id'])">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+          </mat-card-footer>
+        </mat-card>
+    }
+</div>

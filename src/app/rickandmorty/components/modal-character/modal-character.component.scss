@@ -1,0 +1,37 @@
+.character-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__imagen-character {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    &__title-character {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-family: Arial;
+        font-size: 25px;
+    }
+}
+
+.table-character {
+    height: 223px;
+}
+
+.image-character {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.mat-mdc-table .mdc-data-table__row{
+    height: 25px;
+}
+
+.mat-mdc-table .mdc-data-table__header-row {
+    height: 30px;
+}
