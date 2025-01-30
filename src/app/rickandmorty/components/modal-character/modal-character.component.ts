@@ -3,7 +3,6 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Character, EpisodeCharacter } from '../../interfaces/rickandmorty-interface';
 import { MatPaginator } from '@angular/material/paginator';
-import { RickandmortyService } from '../../services/rickandmorty.service';
 
 @Component({
   selector: 'app-modal-character',
@@ -20,26 +19,12 @@ export class ModalCharacterComponent implements AfterViewInit{
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(
-    private rickandmortyService: RickandmortyService,
-  ) {
-
-  }
+  constructor() {}
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
 
-  ngOnInit(): void {
-    console.log('data', this.data);
-  }
+  ngOnInit(): void {}
 
 }
-
-const ELEMENT_DATA: EpisodeCharacter[] = [
-  {episode: '1', name: 'Hydrogen', air_date: 'H'},
-  {episode: '2', name: 'Helium', air_date: 'He'},
-  {episode: '3', name: 'Lithium', air_date: 'Li'},
-  {episode: '4', name: 'Beryllium', air_date: 'Be'},
-  {episode: '5', name: 'Boron', air_date: 'B'}
-];

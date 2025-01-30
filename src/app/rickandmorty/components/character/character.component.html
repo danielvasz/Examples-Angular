@@ -1,17 +1,9 @@
 <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button mat-icon-button>
       <mat-icon>menu</mat-icon>
     </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
+    <span>RickAndMorty</span>
 </mat-toolbar>
-<mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
 
 <div class="character-form">
     @for (item of characterList; track item) {
@@ -31,11 +23,11 @@
           </mat-card-content>
           <mat-card-footer class="card-footer">
             <mat-chip-set>
-              <mat-chip (click)="openSnackBar(item['status'])">
+              <mat-chip (click)="openSnackBar({name: item['name'], value: item['status']})">
                 <mat-icon matChipTrailingIcon svgIcon="{{ chipCharacter(item['status'], 'status') }}"></mat-icon>
                 {{ item['status'] }}
               </mat-chip>
-              <mat-chip>
+              <mat-chip (click)="openSnackBar({name: item['name'], value: item['gender']})">
                 <mat-icon matChipTrailingIcon svgIcon="{{ chipCharacter(item['gender'], 'gender') }}"></mat-icon>
                 {{ item['gender'] }}
               </mat-chip>

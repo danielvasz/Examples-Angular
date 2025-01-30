@@ -35,7 +35,6 @@ export class RickandmortyService {
           throw new Error('Maximo de paginas');
         }
       })
-      // let ids = this.idCharacters(startNumber, endNumber);
       const response = await this.http.get(
         this.url
       ).toPromise();

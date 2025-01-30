@@ -124,7 +124,6 @@ export class CharacterComponent implements OnInit {
     }
   }
 
-
   public async openModal(id: number): Promise<void> {
     let character = this.characterList.find(item => item['id'] == id);
     let listEspisode = await this.getEpisode(character?.episode);
@@ -147,7 +146,6 @@ export class CharacterComponent implements OnInit {
     let listEpisode:  EpisodeCharacter[] = [];
     try {
       for(let item of items) {
-        console.log(item);
         const {
           name,
           air_date,
@@ -174,12 +172,11 @@ export class CharacterComponent implements OnInit {
     }
   }
 
-  openSnackBar(event: string) {
+  openSnackBar(event: Object) {
     this.matSnackBar.openFromComponent(SnackbarCharacterComponent, {
       data: event,
       duration: 5 * 1000,
     });
   }
-
 
 }

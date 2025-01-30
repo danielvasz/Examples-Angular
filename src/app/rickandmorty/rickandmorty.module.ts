@@ -11,12 +11,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { StoreModule } from '@ngrx/store';
 import { characterReduce } from './store/rickandmorty.reducer';
 import { HttpClientModule } from "@angular/common/http";
-import {
-  MatDialog,
+import { 
   MatDialogActions,
   MatDialogClose,
   MatDialogContent,
-  MatDialogRef,
   MatDialogTitle,
 } from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';

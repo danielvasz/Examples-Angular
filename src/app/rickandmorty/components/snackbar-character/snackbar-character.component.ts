@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { MatSnackBarRef } from '@angular/material/snack-bar';
+import { MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-snackbar-character',
@@ -9,5 +9,8 @@ import { MatSnackBarRef } from '@angular/material/snack-bar';
   styleUrl: './snackbar-character.component.scss'
 })
 export class SnackbarCharacterComponent {
-  snackBarRef = inject(MatSnackBarRef);
+  public readonly snackBarRef = inject(MatSnackBarRef<SnackbarCharacterComponent>);
+  public readonly data: any = inject<any>(MAT_SNACK_BAR_DATA);
+  
+  constructor() {}
 }
