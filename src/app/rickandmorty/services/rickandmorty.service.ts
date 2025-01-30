@@ -38,7 +38,6 @@ export class RickandmortyService {
       const response = await this.http.get(
         this.url
       ).toPromise();
-      console.log(response);
       return response;
     } catch (error) {
       console.error('Error en la consulta HTTP:', error);
